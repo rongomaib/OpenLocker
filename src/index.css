@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800;900&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #E84E36;
+  --color-background: #FFF7F0;
+  --color-surface: #FFFFFF;
+  --color-text: #2D2321;
+  --color-muted: #DBCAC4;
+  --color-accent: #FFC82C;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-pill: 0px;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-text font-sans overflow-hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .shadow-chunky {
+    box-shadow: 3px 3px 0px #DBCAC4;
+  }
+  .shadow-chunky-active {
+    box-shadow: 0px 0px 0px #DBCAC4;
+    transform: translate(2px, 2px);
+  }
+  
+  .ruler-bg {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--color-muted),
+      var(--color-muted) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+    background-size: 100% 8px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+  }
+}
+
+/* Custom scrollbar or hidden for the small screen */
+::-webkit-scrollbar {
+  display: none;
+}

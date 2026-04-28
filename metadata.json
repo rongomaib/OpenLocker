@@ -1,0 +1,5 @@
+{
+  "name": "ALoT Locker UI",
+  "description": "A friendly, guiding touch interface for Auckland Library of Tools lockers, optimized for 240x320 displays.",
+  "requestFramePermissions": []
+}
